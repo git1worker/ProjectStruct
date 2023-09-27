@@ -1,0 +1,9 @@
+.bin/
+.vs/
+.vscode/
+.conandeps/
+*.pro.user
+*.txt.user
+build/
+CMakeUserPresets.json
+

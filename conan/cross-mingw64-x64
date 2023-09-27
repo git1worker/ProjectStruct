@@ -1,0 +1,28 @@
+#toolchain=/usr/x86_64-w64-mingw32 # Adjust this path
+#target_host=x86_64-w64-mingw32
+#cc_compiler=gcc
+#cxx_compiler=g++
+
+[buildenv]
+CONAN_CMAKE_FIND_ROOT_PATH=/usr/x86_64-w64-mingw32  # Optional, for CMake to find things in that folder
+CONAN_CMAKE_SYSROOT=/usr/x86_64-w64-mingw32  # Optional, if we want to define sysroot
+CHOST=x86_64-w64-mingw32
+AR=x86_64-w64-mingw32-ar
+AS=x86_64-w64-mingw32-as
+RANLIB=x86_64-w64-mingw32-ranlib
+CC=x86_64-w64-mingw32-gcc
+CXX=x86_64-w64-mingw32-g++
+STRIP=x86_64-w64-mingw32-strip
+RC=x86_64-w64-mingw32-windres
+CMAKE_C_COMPILER=x86_64-w64-mingw32-gcc
+CMAKE_CXX_COMPILER=x86_64-w64-mingw32-g++
+
+[settings]
+# We are cross-building to Windows
+os=Windows
+arch=x86_64
+compiler=gcc
+compiler.threads=posix
+compiler.version=10
+compiler.libcxx=libstdc++11
+build_type=Release

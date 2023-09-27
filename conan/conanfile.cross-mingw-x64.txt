@@ -1,0 +1,17 @@
+[requires]
+boost/1.83.0
+libusb/1.0.26
+
+[options]
+# Cross build with mingw-gcc failed at boost::stacktrace and boost::log
+# i'm too lazy to mess with it, just disable modules
+boost/*:without_log=True
+boost/*:without_stacktrace=True
+
+[generators]
+CMakeDeps
+CMakeToolchain
+
+[layout]
+cmake_layout
+
